@@ -1,0 +1,28 @@
+<md-dialog>
+  <md-toolbar class="md-toolbar-tools">
+    <h2>New Order</h2>
+    <span flex></span>
+    <md-button class="md-icon-button" ng-click="cancel()" layout="end center" aria-label="Cancel Dialog">
+      <md-icon md-svg-src="img/ic_clear_black_24px.svg"></md-icon>
+    </md-button>
+  </md-toolbar>
+  <md-dialog-content class="md-dialog-content">
+    <md-input-container>
+      <label>Sales Contract...</label>
+      <input type="text" ng-model="newOrder.sc">
+    </md-input-container>
+    <md-input-container>
+      <label>Customer...</label>
+      <input type="text" ng-model="newOrder.cus">
+    </md-input-container>
+    <md-input-container>
+      <label>Customer PO...</label>
+      <input type="text" ng-model="newOrder.cpo">
+    </md-input-container>
+  </md-dialog-content>
+  <div class="md-actions" layout="row">
+    <md-button ng-click="add(newOrder)">
+      Add
+    </md-button>
+  </div>
+</md-dialog>
