@@ -1,0 +1,27 @@
+<md-content layout="column" layout-margin>
+    <div flex>
+        <md-input-container flex-gt-sm="33" layout-align-gt-sm="center center">
+            <label>Search...</label>
+            <input type="text" ng-model="search">
+        </md-input-container>
+    </div>
+    <div flex>
+        <md-button ng-repeat="order in home.orders | filter:search" class="orderCard md-whiteframe-z2">
+            <md-toolbar class="md-toolbar-tools backSkyBlue">
+                <h4>SC: {{order.sc}}</h3>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="home.selectOrder(order); home.showEditOrder($event)" layout="end center" aria-label="Edit Order">
+			      <md-icon md-svg-src="img/ic_mode_edit_24px.svg"></md-icon>
+			    </md-button>
+			    <md-button class="md-icon-button" ng-click="home.selectOrder(order); home.deleteOrder($event)" layout="end center" aria-label="Delete Order">
+			      <md-icon md-svg-src="img/ic_delete_24px.svg"></md-icon>
+			    </md-button>
+			</md-toolbar>
+			<h3>Customer: {{order.cus}}</h2>
+			<h5>Customer PO: {{order.cpo}}</h4>
+        </md-button>
+    </div>
+</md-content>
+<md-button class="md-fab fabAbsolute" ng-click="home.showNewOrder($event)" aria-label="New Order Dialog">
+    <md-icon md-svg-src="img/ic_add_24px.svg"></md-icon>
+</md-button>

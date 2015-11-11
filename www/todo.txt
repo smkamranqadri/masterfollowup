@@ -1,0 +1,8 @@
+--Animation
+? move
+--Confirmation before Delete
+UI Router
+Sign In Panel
+Filer Data with Signed In User
+Local Storage
+Splash Screen for mobile and web when loading the app
